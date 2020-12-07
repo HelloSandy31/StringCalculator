@@ -9,9 +9,11 @@ import com.example.StringCalculators;
 public class TestCalculator {
 	public StringCalculators sc = new StringCalculators();
 
-
-	@Test
-	public final void whenDelimiterIsSpecifiedThenItIsUsedToSeparateNumbers() {
-	    assertEquals(3+6+15, sc.add("//;n3;6;15"));
+	//Negative Not allowed testing with exception
+	@Test(expected=Exception.class)
+	public void negativeInputReturnsException() throws Exception
+	{
+		sc.add("-10");
 	}
+	
 }
