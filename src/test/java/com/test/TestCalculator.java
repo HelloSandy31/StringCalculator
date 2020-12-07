@@ -27,4 +27,10 @@ public class TestCalculator {
 		assertEquals(sc.add("1,2"), 3);
 	}
 
+	@Test
+	// handle an unknown amount of numbers
+	public final void handleUnknownNumberOfNumbersWithTheirSums() {
+		assertEquals(121, sc.add("3,6,15,18,46,33"));
+	}
+
 }
